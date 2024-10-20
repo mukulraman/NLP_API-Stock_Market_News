@@ -18,7 +18,7 @@ news_data = {
 }
 
 news_df,merged_df,model,price_df=training_data(news_data, end_date)
-model=joblib.load("model_stock.pkl")
+model=joblib.load("models\Model_Stock.pkl")
 
 merged_df['price_return'] = merged_df['Close'].pct_change()
 correlation_headline = merged_df['price_return'].corr(merged_df['headline_sentiment'])

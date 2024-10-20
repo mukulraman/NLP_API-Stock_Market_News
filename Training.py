@@ -30,6 +30,6 @@ def training_data(news_data, end_date):
 
     model=fit_and_evaluate(X_train, X_test, y_train, y_test)
 
-    joblib.dump(model,"Model_Stock.pkl")
+    joblib.dump(model,"models\Model_Stock.pkl")
 
     return news_df,merged_df,model,price_df
